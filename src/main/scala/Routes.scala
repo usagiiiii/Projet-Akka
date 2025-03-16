@@ -25,6 +25,13 @@ object Routes extends JsonFormats {
             notifications => complete(notifications.toJson)
           }
         }
+      } ~
+      path("api" / "ActiveCourses"){
+        get {
+          onSuccess(ActiveCoursesDAO.getAll()){
+            activeCourses => complete(activeCourses.toJson)
+          }
+        }
       }
 
     
