@@ -31,13 +31,18 @@ object Main extends App {
 
     val insertResult = UserDAO.insert(newUser)
     Await.result(insertResult, Duration.Inf)
-  println("Utilisateur insere avec succes !")*/
+  println("Utilisateur insere avec succes !")
 
   val newNotif = Notifications(10,1,"message test")
 
   val insertResult2 = NotifDAO.insert(newNotif)
   Await.result(insertResult2, Duration.Inf)
-  println("Notif insere avec succes !")
+  println("Notif insere avec succes !")*/
+
+  val newActiveCourse = ActiveCourses(1,1,10.57,2.0)
+
+  val insertResult3 = ActiveCoursesDAO.insert(newActiveCourse)
+  Await.result(insertResult3, Duration.Inf)
 
   println(s"Serveur demarre sur http://localhost:8080/\nAppuyez sur Entrer pour arreter...")
   StdIn.readLine()

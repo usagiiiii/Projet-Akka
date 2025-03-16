@@ -19,5 +19,6 @@ trait JsonFormats extends SprayJsonSupport with DefaultJsonProtocol {
   implicit val messageFormat: RootJsonFormat[Message] = jsonFormat1(Message)
   implicit val userFormat = jsonFormat4(Utilisateur) // Adapter selon tes champs
   implicit val notifFormat = jsonFormat5(Notifications)
+  implicit val ActiveCourseFormat = jsonFormat5(ActiveCourses)
 
 }
